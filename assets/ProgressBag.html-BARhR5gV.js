@@ -1,0 +1,68 @@
+import{_ as n,c as a,a as l,o as e}from"./app-CpstP_eu.js";const p={};function t(o,s){return e(),a("div",null,s[0]||(s[0]=[l(`<h1 id="progressbag-进度礼包" tabindex="-1"><a class="header-anchor" href="#progressbag-进度礼包"><span>ProgressBag 进度礼包</span></a></h1><ul><li>作者: 少司命</li><li>出处: 无</li><li>每当完成一个进度时可以领取一个礼包</li></ul><h2 id="指令" tabindex="-1"><a class="header-anchor" href="#指令"><span>指令</span></a></h2><table><thead><tr><th>语法</th><th style="text-align:center;">权限</th><th style="text-align:center;">说明</th></tr></thead><tbody><tr><td>/礼包 领取 [礼包名称]</td><td style="text-align:center;">bag.use</td><td style="text-align:center;">领取礼包</td></tr><tr><td>/礼包 领取全部</td><td style="text-align:center;">bag.use</td><td style="text-align:center;">领取所有可领取礼包</td></tr><tr><td>/礼包 list</td><td style="text-align:center;">bag.use</td><td style="text-align:center;">查看礼包列表</td></tr><tr><td>/礼包 重置</td><td style="text-align:center;">bag.admin</td><td style="text-align:center;">重置领取礼包</td></tr></tbody></table><h2 id="具体进度请查看-progresstype-cs-文件" tabindex="-1"><a class="header-anchor" href="#具体进度请查看-progresstype-cs-文件"><span>具体进度请查看 ProgressType.cs 文件</span></a></h2><h2 id="配置" tabindex="-1"><a class="header-anchor" href="#配置"><span>配置</span></a></h2><blockquote><p>配置文件位置：tshock/进度礼包.json</p></blockquote><div class="language-json5 line-numbers-mode" data-highlighter="shiki" data-ext="json5" data-title="json5" style="background-color:#1E1E1E;color:#D4D4D4;"><pre class="shiki dark-plus vp-code"><code><span class="line"><span style="color:#D4D4D4;">{</span></span>
+<span class="line"><span style="color:#CE9178;">  &quot;礼包&quot;</span><span style="color:#D4D4D4;">: [</span></span>
+<span class="line"><span style="color:#D4D4D4;">    {</span></span>
+<span class="line"><span style="color:#CE9178;">      &quot;礼包名称&quot;</span><span style="color:#D4D4D4;">: </span><span style="color:#CE9178;">&quot;无限制礼包&quot;</span><span style="color:#D4D4D4;">,</span></span>
+<span class="line"><span style="color:#CE9178;">      &quot;进度限制&quot;</span><span style="color:#D4D4D4;">: [</span><span style="color:#CE9178;">&quot;无限制&quot;</span><span style="color:#D4D4D4;">],</span></span>
+<span class="line"><span style="color:#CE9178;">      &quot;礼包奖励&quot;</span><span style="color:#D4D4D4;">: [</span></span>
+<span class="line"><span style="color:#D4D4D4;">        {</span></span>
+<span class="line"><span style="color:#CE9178;">          &quot;netID&quot;</span><span style="color:#D4D4D4;">: 29,</span></span>
+<span class="line"><span style="color:#CE9178;">          &quot;prefix&quot;</span><span style="color:#D4D4D4;">: 0,</span></span>
+<span class="line"><span style="color:#CE9178;">          &quot;stack&quot;</span><span style="color:#D4D4D4;">: 5</span></span>
+<span class="line"><span style="color:#D4D4D4;">        },</span></span>
+<span class="line"><span style="color:#D4D4D4;">        {</span></span>
+<span class="line"><span style="color:#CE9178;">          &quot;netID&quot;</span><span style="color:#D4D4D4;">: 22,</span></span>
+<span class="line"><span style="color:#CE9178;">          &quot;prefix&quot;</span><span style="color:#D4D4D4;">: 0,</span></span>
+<span class="line"><span style="color:#CE9178;">          &quot;stack&quot;</span><span style="color:#D4D4D4;">: 99</span></span>
+<span class="line"><span style="color:#D4D4D4;">        }</span></span>
+<span class="line"><span style="color:#D4D4D4;">      ],</span></span>
+<span class="line"><span style="color:#CE9178;">      &quot;执行命令&quot;</span><span style="color:#D4D4D4;">: [],</span></span>
+<span class="line"><span style="color:#CE9178;">      &quot;已领取玩家&quot;</span><span style="color:#D4D4D4;">: [],</span></span>
+<span class="line"><span style="color:#CE9178;">      &quot;可领取组&quot;</span><span style="color:#D4D4D4;">: []</span></span>
+<span class="line"><span style="color:#D4D4D4;">    },</span></span>
+<span class="line"><span style="color:#D4D4D4;">    {</span></span>
+<span class="line"><span style="color:#CE9178;">      &quot;礼包名称&quot;</span><span style="color:#D4D4D4;">: </span><span style="color:#CE9178;">&quot;闪退补偿礼包&quot;</span><span style="color:#D4D4D4;">,</span></span>
+<span class="line"><span style="color:#CE9178;">      &quot;进度限制&quot;</span><span style="color:#D4D4D4;">: [],</span></span>
+<span class="line"><span style="color:#CE9178;">      &quot;礼包奖励&quot;</span><span style="color:#D4D4D4;">: [</span></span>
+<span class="line"><span style="color:#D4D4D4;">        {</span></span>
+<span class="line"><span style="color:#CE9178;">          &quot;netID&quot;</span><span style="color:#D4D4D4;">: 8,</span></span>
+<span class="line"><span style="color:#CE9178;">          &quot;prefix&quot;</span><span style="color:#D4D4D4;">: 0,</span></span>
+<span class="line"><span style="color:#CE9178;">          &quot;stack&quot;</span><span style="color:#D4D4D4;">: 5</span></span>
+<span class="line"><span style="color:#D4D4D4;">        }</span></span>
+<span class="line"><span style="color:#D4D4D4;">      ],</span></span>
+<span class="line"><span style="color:#CE9178;">      &quot;执行命令&quot;</span><span style="color:#D4D4D4;">: [],</span></span>
+<span class="line"><span style="color:#CE9178;">      &quot;已领取玩家&quot;</span><span style="color:#D4D4D4;">: [],</span></span>
+<span class="line"><span style="color:#CE9178;">      &quot;可领取组&quot;</span><span style="color:#D4D4D4;">: []</span></span>
+<span class="line"><span style="color:#D4D4D4;">    },</span></span>
+<span class="line"><span style="color:#D4D4D4;">    {</span></span>
+<span class="line"><span style="color:#CE9178;">      &quot;礼包名称&quot;</span><span style="color:#D4D4D4;">: </span><span style="color:#CE9178;">&quot;史莱姆王礼包&quot;</span><span style="color:#D4D4D4;">,</span></span>
+<span class="line"><span style="color:#CE9178;">      &quot;进度限制&quot;</span><span style="color:#D4D4D4;">: [</span><span style="color:#CE9178;">&quot;史莱姆王&quot;</span><span style="color:#D4D4D4;">],</span></span>
+<span class="line"><span style="color:#CE9178;">      &quot;礼包奖励&quot;</span><span style="color:#D4D4D4;">: [</span></span>
+<span class="line"><span style="color:#D4D4D4;">        {</span></span>
+<span class="line"><span style="color:#CE9178;">          &quot;netID&quot;</span><span style="color:#D4D4D4;">: 2430,</span></span>
+<span class="line"><span style="color:#CE9178;">          &quot;prefix&quot;</span><span style="color:#D4D4D4;">: 0,</span></span>
+<span class="line"><span style="color:#CE9178;">          &quot;stack&quot;</span><span style="color:#D4D4D4;">: 1</span></span>
+<span class="line"><span style="color:#D4D4D4;">        }</span></span>
+<span class="line"><span style="color:#D4D4D4;">      ],</span></span>
+<span class="line"><span style="color:#CE9178;">      &quot;执行命令&quot;</span><span style="color:#D4D4D4;">: [],</span></span>
+<span class="line"><span style="color:#CE9178;">      &quot;已领取玩家&quot;</span><span style="color:#D4D4D4;">: [],</span></span>
+<span class="line"><span style="color:#CE9178;">      &quot;可领取组&quot;</span><span style="color:#D4D4D4;">: []</span></span>
+<span class="line"><span style="color:#D4D4D4;">    },</span></span>
+<span class="line"><span style="color:#D4D4D4;">    {</span></span>
+<span class="line"><span style="color:#CE9178;">      &quot;礼包名称&quot;</span><span style="color:#D4D4D4;">: </span><span style="color:#CE9178;">&quot;克苏鲁之眼礼包&quot;</span><span style="color:#D4D4D4;">,</span></span>
+<span class="line"><span style="color:#CE9178;">      &quot;进度限制&quot;</span><span style="color:#D4D4D4;">: [</span><span style="color:#CE9178;">&quot;克苏鲁之眼&quot;</span><span style="color:#D4D4D4;">],</span></span>
+<span class="line"><span style="color:#CE9178;">      &quot;礼包奖励&quot;</span><span style="color:#D4D4D4;">: [</span></span>
+<span class="line"><span style="color:#D4D4D4;">        {</span></span>
+<span class="line"><span style="color:#CE9178;">          &quot;netID&quot;</span><span style="color:#D4D4D4;">: 3097,</span></span>
+<span class="line"><span style="color:#CE9178;">          &quot;prefix&quot;</span><span style="color:#D4D4D4;">: 0,</span></span>
+<span class="line"><span style="color:#CE9178;">          &quot;stack&quot;</span><span style="color:#D4D4D4;">: 1</span></span>
+<span class="line"><span style="color:#D4D4D4;">        }</span></span>
+<span class="line"><span style="color:#D4D4D4;">      ],</span></span>
+<span class="line"><span style="color:#CE9178;">      &quot;执行命令&quot;</span><span style="color:#D4D4D4;">: [],</span></span>
+<span class="line"><span style="color:#CE9178;">      &quot;已领取玩家&quot;</span><span style="color:#D4D4D4;">: [],</span></span>
+<span class="line"><span style="color:#CE9178;">      &quot;可领取组&quot;</span><span style="color:#D4D4D4;">: []</span></span>
+<span class="line"><span style="color:#D4D4D4;">    }</span></span>
+<span class="line"><span style="color:#D4D4D4;">  ]</span></span>
+<span class="line"><span style="color:#D4D4D4;">}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="更新日志" tabindex="-1"><a class="header-anchor" href="#更新日志"><span>更新日志</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="background-color:#1E1E1E;color:#D4D4D4;"><pre class="shiki dark-plus vp-code"><code><span class="line"><span>v1.0.1.0</span></span>
+<span class="line"><span>完善卸载函数</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>1. 区分世吞与克脑的进度判断</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="反馈" tabindex="-1"><a class="header-anchor" href="#反馈"><span>反馈</span></a></h2><ul><li>优先发issued -&gt; 共同维护的插件库：https://github.com/UnrealMultiple/TShockPlugin</li><li>次优先：TShock官方群：816771079</li><li>大概率看不到但是也可以：国内社区trhub.cn ，bbstr.net , tr.monika.love</li></ul>`,12)]))}const c=n(p,[["render",t],["__file","ProgressBag.html.vue"]]),r=JSON.parse('{"path":"/zh/guide/ProgressBag.html","title":"ProgressBag 进度礼包","lang":"zh-CN","frontmatter":{"description":"ProgressBag 进度礼包 作者: 少司命 出处: 无 每当完成一个进度时可以领取一个礼包 指令 具体进度请查看 ProgressType.cs 文件 配置 配置文件位置：tshock/进度礼包.json 更新日志 反馈 优先发issued -> 共同维护的插件库：https://github.com/UnrealMultiple/TShockP...","head":[["meta",{"property":"og:url","content":"http://docs.terraria.ink/zh/guide/ProgressBag.html"}],["meta",{"property":"og:site_name","content":"TShock中文插件库"}],["meta",{"property":"og:title","content":"ProgressBag 进度礼包"}],["meta",{"property":"og:description","content":"ProgressBag 进度礼包 作者: 少司命 出处: 无 每当完成一个进度时可以领取一个礼包 指令 具体进度请查看 ProgressType.cs 文件 配置 配置文件位置：tshock/进度礼包.json 更新日志 反馈 优先发issued -> 共同维护的插件库：https://github.com/UnrealMultiple/TShockP..."}],["meta",{"property":"og:type","content":"article"}],["meta",{"property":"og:locale","content":"zh-CN"}],["script",{"type":"application/ld+json"},"{\\"@context\\":\\"https://schema.org\\",\\"@type\\":\\"Article\\",\\"headline\\":\\"ProgressBag 进度礼包\\",\\"image\\":[\\"\\"],\\"dateModified\\":null,\\"author\\":[]}"]]},"headers":[{"level":2,"title":"指令","slug":"指令","link":"#指令","children":[]},{"level":2,"title":"具体进度请查看 ProgressType.cs 文件","slug":"具体进度请查看-progresstype-cs-文件","link":"#具体进度请查看-progresstype-cs-文件","children":[]},{"level":2,"title":"配置","slug":"配置","link":"#配置","children":[]},{"level":2,"title":"更新日志","slug":"更新日志","link":"#更新日志","children":[]},{"level":2,"title":"反馈","slug":"反馈","link":"#反馈","children":[]}],"git":{},"autoDesc":true,"filePathRelative":"zh/guide/ProgressBag.md"}');export{c as comp,r as data};
